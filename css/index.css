@@ -1,0 +1,308 @@
+*, html, body {
+    margin: 0;
+    padding: 0; list-style: none;
+    box-sizing:border-box;
+    font-family: sans-serif;
+}
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+}
+.panel {
+    min-width: 30%;
+    min-height: 200px;
+    background: #336699;
+    margin: 20px;
+    padding: 10px;
+}
+.users form {
+    display: flex;
+}
+.users form input[type="text"]{
+    flex-grow: 3;
+    font-size: 16px;
+    padding: 5px;
+}
+.users form input[type="submit"]{
+    flex-grow: 1;
+}
+.panel ul li {
+    margin-top: 5px;
+    position: relative;
+    padding: 5px;
+    background: #f75811;
+    box-shadow: 1px 1px 3px #000;
+    border-radius: 5px;
+}
+.panel ul li:hover{
+    box-shadow: inset 1px 1px 3px #000;
+    padding-top: 6px;
+    padding-bottom: 4px;
+}
+.panel ul li:hover .del,.panel ul li:hover .more{
+    top: calc(50% - 9px);
+}
+.panel ul li p {
+    font-size: 16px;
+    color: #fff;
+    max-width: 70%;
+}
+.panel ul li .del, .panel ul li .more{
+    position: absolute;
+    top: calc(50% - 10px);
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+.panel ul li .del:hover, .panel ul li .more:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+.panel ul li .del {
+    left: 80%;
+    background-image: url("../imges/delete.png");
+}
+.panel ul li .more{
+    left: 90%;
+    background-image: url("../imges/More.png");
+}
+.panel ul li.active {
+    background-color: springgreen;
+    box-shadow: inset 1px 1px 3px #000;
+    padding-top: 6px;
+    padding-bottom: 4px;
+}
+.panel ul li.active .del, .panel ul li.active .more{
+    top: calc(50% - 9px);
+}
+.notes form {
+    display: flex;
+    flex-wrap: wrap;
+}
+.notes form input[type="text"]{
+    font-size: 16px;
+    padding: 5px;
+    width: 85%;
+}
+.notes form input[type="submit"]{
+    width: 15%;
+}
+.notes form textarea{
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    max-height: 50px;
+    resize: none;
+}
+.details h3 {
+    text-align: center;
+    color: #000;
+    background: #fff;
+    border-radius: 5px;
+    padding: 5px 0;
+}
+.details p {
+    text-align: justify;
+    background: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    line-height: 20px;
+}
+
+/*====================FADER========================*/
+
+
+.fader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.7);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+}
+#fountainG{
+    position:relative;
+    width:234px;
+    height:28px;
+    margin:auto;
+}
+
+.fountainG{
+    position:absolute;
+    top:0;
+    background-color:rgb(0,0,0);
+    width:28px;
+    height:28px;
+    animation-name:bounce_fountainG;
+    -o-animation-name:bounce_fountainG;
+    -ms-animation-name:bounce_fountainG;
+    -webkit-animation-name:bounce_fountainG;
+    -moz-animation-name:bounce_fountainG;
+    animation-duration:1.5s;
+    -o-animation-duration:1.5s;
+    -ms-animation-duration:1.5s;
+    -webkit-animation-duration:1.5s;
+    -moz-animation-duration:1.5s;
+    animation-iteration-count:infinite;
+    -o-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    animation-direction:normal;
+    -o-animation-direction:normal;
+    -ms-animation-direction:normal;
+    -webkit-animation-direction:normal;
+    -moz-animation-direction:normal;
+    transform:scale(.3);
+    -o-transform:scale(.3);
+    -ms-transform:scale(.3);
+    -webkit-transform:scale(.3);
+    -moz-transform:scale(.3);
+    border-radius:19px;
+    -o-border-radius:19px;
+    -ms-border-radius:19px;
+    -webkit-border-radius:19px;
+    -moz-border-radius:19px;
+}
+
+#fountainG_1{
+    left:0;
+    animation-delay:0.6s;
+    -o-animation-delay:0.6s;
+    -ms-animation-delay:0.6s;
+    -webkit-animation-delay:0.6s;
+    -moz-animation-delay:0.6s;
+}
+
+#fountainG_2{
+    left:29px;
+    animation-delay:0.75s;
+    -o-animation-delay:0.75s;
+    -ms-animation-delay:0.75s;
+    -webkit-animation-delay:0.75s;
+    -moz-animation-delay:0.75s;
+}
+
+#fountainG_3{
+    left:58px;
+    animation-delay:0.9s;
+    -o-animation-delay:0.9s;
+    -ms-animation-delay:0.9s;
+    -webkit-animation-delay:0.9s;
+    -moz-animation-delay:0.9s;
+}
+
+#fountainG_4{
+    left:88px;
+    animation-delay:1.05s;
+    -o-animation-delay:1.05s;
+    -ms-animation-delay:1.05s;
+    -webkit-animation-delay:1.05s;
+    -moz-animation-delay:1.05s;
+}
+
+#fountainG_5{
+    left:117px;
+    animation-delay:1.2s;
+    -o-animation-delay:1.2s;
+    -ms-animation-delay:1.2s;
+    -webkit-animation-delay:1.2s;
+    -moz-animation-delay:1.2s;
+}
+
+#fountainG_6{
+    left:146px;
+    animation-delay:1.35s;
+    -o-animation-delay:1.35s;
+    -ms-animation-delay:1.35s;
+    -webkit-animation-delay:1.35s;
+    -moz-animation-delay:1.35s;
+}
+
+#fountainG_7{
+    left:175px;
+    animation-delay:1.5s;
+    -o-animation-delay:1.5s;
+    -ms-animation-delay:1.5s;
+    -webkit-animation-delay:1.5s;
+    -moz-animation-delay:1.5s;
+}
+
+#fountainG_8{
+    left:205px;
+    animation-delay:1.64s;
+    -o-animation-delay:1.64s;
+    -ms-animation-delay:1.64s;
+    -webkit-animation-delay:1.64s;
+    -moz-animation-delay:1.64s;
+}
+
+
+
+@keyframes bounce_fountainG{
+    0%{
+        transform:scale(1);
+        background-color:rgb(0,0,0);
+    }
+
+    100%{
+        transform:scale(.3);
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-o-keyframes bounce_fountainG{
+    0%{
+        -o-transform:scale(1);
+        background-color:rgb(0,0,0);
+    }
+
+    100%{
+        -o-transform:scale(.3);
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-ms-keyframes bounce_fountainG{
+    0%{
+        -ms-transform:scale(1);
+        background-color:rgb(0,0,0);
+    }
+
+    100%{
+        -ms-transform:scale(.3);
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-webkit-keyframes bounce_fountainG{
+    0%{
+        -webkit-transform:scale(1);
+        background-color:rgb(0,0,0);
+    }
+
+    100%{
+        -webkit-transform:scale(.3);
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-moz-keyframes bounce_fountainG{
+    0%{
+        -moz-transform:scale(1);
+        background-color:rgb(0,0,0);
+    }
+
+    100%{
+        -moz-transform:scale(.3);
+        background-color:rgb(255,255,255);
+    }
+}
